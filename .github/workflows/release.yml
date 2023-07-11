@@ -65,7 +65,7 @@ jobs:
         path: ${{ env.PACKAGENAME }}.zip
 
   release:
-    needs: [setup, ubuntu, macos, windows]
+    needs: [setup, windows]
     runs-on: ubuntu-latest
     steps:
     - name: download
