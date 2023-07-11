@@ -8,7 +8,6 @@ env:
 jobs:
 
   setup:
-    runs-on: ubuntu-latest
     outputs:
       APPNAME: ${{ steps.get_appname.outputs.APPNAME }}
       VERSION: ${{ steps.get_version.outputs.VERSION }}
@@ -59,7 +58,7 @@ jobs:
         Copy-Item -Verbose -Path "C:\windows\system32\vcomp140d.dll" -Destination "${{ env.PACKAGENAME }}"
         7z a -r ${{ env.PACKAGENAME }}.zip ${{ env.PACKAGENAME }}
     - name: upload
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: ${{ env.PACKAGENAME }}
         path: ${{ env.PACKAGENAME }}.zip
