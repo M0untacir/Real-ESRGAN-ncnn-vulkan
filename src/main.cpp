@@ -116,6 +116,7 @@ static void print_usage()
     fprintf(stderr, "  -x                   enable tta mode\n");
     fprintf(stderr, "  -f format            output image format (jpg/png/webp, default=ext/png)\n");
     fprintf(stderr, "  -v                   verbose output\n");
+    fprintf(stderr, "  -xXx                   JUST A TEST IF THIS SHIT IS WORKING\n");
 }
 
 class Task
