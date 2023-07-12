@@ -21,7 +21,7 @@ jobs:
       run: echo ::set-output name=APPNAME::${APPLICATION_NAME}
     - name: get-version
       id: get_version
-      run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
+      run: echo ::set-output name=VERSION::${v0.2.0}
 
   windows:
     needs: [setup]
